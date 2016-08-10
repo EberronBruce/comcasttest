@@ -15,5 +15,15 @@ let API_URL = "https://api.myjson.com/bins/4je7x"
 // Key to get array for information on API call
 let DATA_KEY = "data"
 
-let USERNAME = "john"
-let PASSWORD = "doe"
+class privateConstants {
+    private let _USERNAME = "john"
+    private let _PASSWORD = "doe"
+    
+    var USERNAME: String{
+        return _USERNAME
+    }
+    
+    var PASSWORD: String{
+        return _PASSWORD
+    }
+}

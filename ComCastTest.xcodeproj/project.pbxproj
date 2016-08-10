@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7A0B68311D5A97DC00E1F935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68301D5A97DC00E1F935 /* AppDelegate.swift */; };
-		7A0B68331D5A97DC00E1F935 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68321D5A97DC00E1F935 /* LoginVC.swift */; };
 		7A0B68361D5A97DC00E1F935 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B68341D5A97DC00E1F935 /* Main.storyboard */; };
 		7A0B68391D5A97DC00E1F935 /* ComCastTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68371D5A97DC00E1F935 /* ComCastTest.xcdatamodeld */; };
 		7A0B683B1D5A97DC00E1F935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B683A1D5A97DC00E1F935 /* Assets.xcassets */; };
@@ -24,6 +23,12 @@
 		7A0B686E1D5AA25600E1F935 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B686D1D5AA25600E1F935 /* DataContainer.swift */; };
 		7A0B686F1D5AA25600E1F935 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B686D1D5AA25600E1F935 /* DataContainer.swift */; };
 		7A0B68701D5AA25600E1F935 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B686D1D5AA25600E1F935 /* DataContainer.swift */; };
+		7A23C3821D5BB03B007770EA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3811D5BB03B007770EA /* LoginVC.swift */; };
+		7A23C3831D5BB03B007770EA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3811D5BB03B007770EA /* LoginVC.swift */; };
+		7A23C3841D5BB03B007770EA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3811D5BB03B007770EA /* LoginVC.swift */; };
+		7A23C3861D5BBD6E007770EA /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */; };
+		7A23C3871D5BBD6E007770EA /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */; };
+		7A23C3881D5BBD6E007770EA /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +51,6 @@
 /* Begin PBXFileReference section */
 		7A0B682D1D5A97DC00E1F935 /* ComCastTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComCastTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0B68301D5A97DC00E1F935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A0B68321D5A97DC00E1F935 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7A0B68351D5A97DC00E1F935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A0B68381D5A97DC00E1F935 /* ComCastTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComCastTest.xcdatamodel; sourceTree = "<group>"; };
 		7A0B683A1D5A97DC00E1F935 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		7A0B68651D5A98B100E1F935 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		7A0B68691D5A99A800E1F935 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7A0B686D1D5AA25600E1F935 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
+		7A23C3811D5BB03B007770EA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +168,8 @@
 		7A0B68631D5A982200E1F935 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7A0B68321D5A97DC00E1F935 /* LoginVC.swift */,
+				7A23C3811D5BB03B007770EA /* LoginVC.swift */,
+				7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -307,8 +314,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0B686A1D5A99A800E1F935 /* Constants.swift in Sources */,
+				7A23C3861D5BBD6E007770EA /* WelcomeVC.swift in Sources */,
 				7A0B68391D5A97DC00E1F935 /* ComCastTest.xcdatamodeld in Sources */,
-				7A0B68331D5A97DC00E1F935 /* LoginVC.swift in Sources */,
+				7A23C3821D5BB03B007770EA /* LoginVC.swift in Sources */,
 				7A0B68311D5A97DC00E1F935 /* AppDelegate.swift in Sources */,
 				7A0B68661D5A98B100E1F935 /* DataService.swift in Sources */,
 				7A0B686E1D5AA25600E1F935 /* DataContainer.swift in Sources */,
@@ -320,9 +328,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0B68491D5A97DD00E1F935 /* ComCastTestTests.swift in Sources */,
+				7A23C3871D5BBD6E007770EA /* WelcomeVC.swift in Sources */,
 				7A0B68671D5A98B100E1F935 /* DataService.swift in Sources */,
 				7A0B686B1D5A99A800E1F935 /* Constants.swift in Sources */,
 				7A0B686F1D5AA25600E1F935 /* DataContainer.swift in Sources */,
+				7A23C3831D5BB03B007770EA /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,9 +341,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0B68541D5A97DD00E1F935 /* ComCastTestUITests.swift in Sources */,
+				7A23C3881D5BBD6E007770EA /* WelcomeVC.swift in Sources */,
 				7A0B68681D5A98B100E1F935 /* DataService.swift in Sources */,
 				7A0B686C1D5A99A800E1F935 /* Constants.swift in Sources */,
 				7A0B68701D5AA25600E1F935 /* DataContainer.swift in Sources */,
+				7A23C3841D5BB03B007770EA /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
