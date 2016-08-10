@@ -8,13 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		7A0B68311D5A97DC00E1F935 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68301D5A97DC00E1F935 /* AppDelegate.swift */; };
-		7A0B68331D5A97DC00E1F935 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68321D5A97DC00E1F935 /* ViewController.swift */; };
+		7A0B68331D5A97DC00E1F935 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68321D5A97DC00E1F935 /* LoginVC.swift */; };
 		7A0B68361D5A97DC00E1F935 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B68341D5A97DC00E1F935 /* Main.storyboard */; };
 		7A0B68391D5A97DC00E1F935 /* ComCastTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68371D5A97DC00E1F935 /* ComCastTest.xcdatamodeld */; };
 		7A0B683B1D5A97DC00E1F935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B683A1D5A97DC00E1F935 /* Assets.xcassets */; };
 		7A0B683E1D5A97DC00E1F935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B683C1D5A97DC00E1F935 /* LaunchScreen.storyboard */; };
 		7A0B68491D5A97DD00E1F935 /* ComCastTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68481D5A97DD00E1F935 /* ComCastTestTests.swift */; };
 		7A0B68541D5A97DD00E1F935 /* ComCastTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68531D5A97DD00E1F935 /* ComCastTestUITests.swift */; };
+		7A0B68661D5A98B100E1F935 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68651D5A98B100E1F935 /* DataService.swift */; };
+		7A0B68671D5A98B100E1F935 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68651D5A98B100E1F935 /* DataService.swift */; };
+		7A0B68681D5A98B100E1F935 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68651D5A98B100E1F935 /* DataService.swift */; };
+		7A0B686A1D5A99A800E1F935 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68691D5A99A800E1F935 /* Constants.swift */; };
+		7A0B686B1D5A99A800E1F935 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68691D5A99A800E1F935 /* Constants.swift */; };
+		7A0B686C1D5A99A800E1F935 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68691D5A99A800E1F935 /* Constants.swift */; };
+		7A0B686E1D5AA25600E1F935 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B686D1D5AA25600E1F935 /* DataContainer.swift */; };
+		7A0B686F1D5AA25600E1F935 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B686D1D5AA25600E1F935 /* DataContainer.swift */; };
+		7A0B68701D5AA25600E1F935 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B686D1D5AA25600E1F935 /* DataContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +46,7 @@
 /* Begin PBXFileReference section */
 		7A0B682D1D5A97DC00E1F935 /* ComCastTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComCastTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0B68301D5A97DC00E1F935 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7A0B68321D5A97DC00E1F935 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7A0B68321D5A97DC00E1F935 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7A0B68351D5A97DC00E1F935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7A0B68381D5A97DC00E1F935 /* ComCastTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComCastTest.xcdatamodel; sourceTree = "<group>"; };
 		7A0B683A1D5A97DC00E1F935 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		7A0B684F1D5A97DD00E1F935 /* ComCastTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComCastTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0B68531D5A97DD00E1F935 /* ComCastTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComCastTestUITests.swift; sourceTree = "<group>"; };
 		7A0B68551D5A97DD00E1F935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A0B68651D5A98B100E1F935 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		7A0B68691D5A99A800E1F935 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7A0B686D1D5AA25600E1F935 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +111,11 @@
 		7A0B682F1D5A97DC00E1F935 /* ComCastTest */ = {
 			isa = PBXGroup;
 			children = (
+				7A0B68641D5A987A00E1F935 /* Service */,
+				7A0B68631D5A982200E1F935 /* Controller */,
+				7A0B68621D5A981B00E1F935 /* View */,
+				7A0B68611D5A981300E1F935 /* Model */,
 				7A0B68301D5A97DC00E1F935 /* AppDelegate.swift */,
-				7A0B68321D5A97DC00E1F935 /* ViewController.swift */,
-				7A0B68341D5A97DC00E1F935 /* Main.storyboard */,
 				7A0B683A1D5A97DC00E1F935 /* Assets.xcassets */,
 				7A0B683C1D5A97DC00E1F935 /* LaunchScreen.storyboard */,
 				7A0B683F1D5A97DC00E1F935 /* Info.plist */,
@@ -126,6 +140,39 @@
 				7A0B68551D5A97DD00E1F935 /* Info.plist */,
 			);
 			path = ComCastTestUITests;
+			sourceTree = "<group>";
+		};
+		7A0B68611D5A981300E1F935 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A0B68691D5A99A800E1F935 /* Constants.swift */,
+				7A0B686D1D5AA25600E1F935 /* DataContainer.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7A0B68621D5A981B00E1F935 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A0B68341D5A97DC00E1F935 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7A0B68631D5A982200E1F935 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7A0B68321D5A97DC00E1F935 /* LoginVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		7A0B68641D5A987A00E1F935 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				7A0B68651D5A98B100E1F935 /* DataService.swift */,
+			);
+			name = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +306,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A0B686A1D5A99A800E1F935 /* Constants.swift in Sources */,
 				7A0B68391D5A97DC00E1F935 /* ComCastTest.xcdatamodeld in Sources */,
-				7A0B68331D5A97DC00E1F935 /* ViewController.swift in Sources */,
+				7A0B68331D5A97DC00E1F935 /* LoginVC.swift in Sources */,
 				7A0B68311D5A97DC00E1F935 /* AppDelegate.swift in Sources */,
+				7A0B68661D5A98B100E1F935 /* DataService.swift in Sources */,
+				7A0B686E1D5AA25600E1F935 /* DataContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +320,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0B68491D5A97DD00E1F935 /* ComCastTestTests.swift in Sources */,
+				7A0B68671D5A98B100E1F935 /* DataService.swift in Sources */,
+				7A0B686B1D5A99A800E1F935 /* Constants.swift in Sources */,
+				7A0B686F1D5AA25600E1F935 /* DataContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +331,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0B68541D5A97DD00E1F935 /* ComCastTestUITests.swift in Sources */,
+				7A0B68681D5A98B100E1F935 /* DataService.swift in Sources */,
+				7A0B686C1D5A99A800E1F935 /* Constants.swift in Sources */,
+				7A0B68701D5AA25600E1F935 /* DataContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,6 +544,7 @@
 				7A0B685A1D5A97DD00E1F935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A0B685B1D5A97DD00E1F935 /* Build configuration list for PBXNativeTarget "ComCastTestTests" */ = {
 			isa = XCConfigurationList;
@@ -496,6 +553,7 @@
 				7A0B685D1D5A97DD00E1F935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7A0B685E1D5A97DD00E1F935 /* Build configuration list for PBXNativeTarget "ComCastTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +562,7 @@
 				7A0B68601D5A97DD00E1F935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
