@@ -13,10 +13,8 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     var dataContainers = [DataContainer]()
-    
     let dataService = DataService()
-    
-    var images = [ImageRecord]()
+    var images = [ImageRecord]() //Used for NSOperations
     let pendingOperations = PendingOperations()
     
     override func viewDidLoad() {
@@ -26,67 +24,59 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.tableView.dataSource = self
 
         dataService.getInformationFromApi(API_URL)
-        
-
-        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableVC.getDataFromDataService(_:)), name: API_NOTIFY, object: nil)
     }
     
-    
-    
-    ///-------------------------------------------------------------------------
+    //Mark: - Table View Methods
+    //------------------------------------------------------------------------------------
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataContainers.count
     }
     
+    //Mark: - In the cell for row at index path, the cell is recycled and the images are pulled from data and checked if they have been downloaded.
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("InfoCell") as? InformationCell {
             let data = dataContainers[indexPath.row]
             cell.setUpCell(title: data.title, description: data.description)
             
-            let photoDetails = images[indexPath.row]
+            let imageDetails = images[indexPath.row]
             
             if data.type != nil {
-                if photoDetails.image != nil {
-                    cell.updateCellImage(photoDetails.image!)
+                if imageDetails.image != nil {
+                    cell.updateCellImage(imageDetails.image!)
                 }
             } else {
                 cell.updateCellImage(UIImage(named: "unknown")!)
             }
             
-            switch (photoDetails.state) {
+            switch (imageDetails.state) {
             case .Failed: break
-                //cell.textLabel?.text = "Failed to load"
             case .New, .Downloaded:
-                //indicator.startAnimating()
-                if (!tableView.dragging && !tableView.decelerating) {
-                    self.startOperationsForPhotoRecord(photoDetails, indexPath: indexPath)
-                }
+                self.startOperationsForImageRecord(imageDetails, indexPath: indexPath)
             }
             
             return cell
             
-//            if data.type != "" {
-//                if data.image == nil {
-//                    getImagesFromDataService(indexPath.row, urlString: data.link)
-//                }else {
-//                    cell.updateCellImage(data.image!)
-//                }
-//            } else {
-//                cell.updateCellImage(UIImage(named: "unknown")!)
-//            }
-//
-//            return cell
         } else {
             return InformationCell()
         }
     }
     
-    func startOperationsForPhotoRecord(photoDetails: ImageRecord, indexPath: NSIndexPath){
-        switch (photoDetails.state) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let data = dataContainers[indexPath.row]
+        data.image = images[indexPath.row].image
+        performSegueWithIdentifier("ImageSegue", sender: data)
+        
+        
+    }
+    //-----------------------------------------------------------------------------------
+    
+    //Mark: - This function calls the function to start downloading the images
+    func startOperationsForImageRecord(imageDetails: ImageRecord, indexPath: NSIndexPath){
+        switch (imageDetails.state) {
         case .New:
-            startDownloadForRecord(photoDetails, indexPath: indexPath)
+            startDownloadForRecord(imageDetails, indexPath: indexPath)
         case .Downloaded:
             NSLog("Downloaded")
         default:
@@ -94,15 +84,13 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
 
-    func startDownloadForRecord(photoDetails: ImageRecord, indexPath: NSIndexPath){
-        //1
+    //Mark: - This function takes the infromation and calls the NSOperation classes to download the images based in index path. It takes one ImageRecord object and it takes a path. It does not return anything.
+    func startDownloadForRecord(imageDetails: ImageRecord, indexPath: NSIndexPath){
         if pendingOperations.downloadsInProgress[indexPath] != nil {
             return
         }
-        
-        //2
-        let downloader = ImageDownloader(imageRecord: photoDetails)
-        //3
+
+        let downloader = ImageDownloader(imageRecord: imageDetails)
         downloader.completionBlock = {
             if downloader.cancelled {
                 return
@@ -112,18 +100,11 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             })
         }
-        //4
         pendingOperations.downloadsInProgress[indexPath] = downloader
-        //5
         pendingOperations.downloadQueue.addOperation(downloader)
     }
 
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    //Mark: - This function is called from the notification and it takes the data and puts it in to the dataContainer and in the images arrary.
     func getDataFromDataService(notification: NSNotification) {
         dispatch_async(dispatch_get_main_queue()) {
             if let dataContainer = notification.userInfo![NOTIFY_DICT_KEY] as? [DataContainer] {
@@ -138,28 +119,19 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    func getImagesFromDataService(index: Int, urlString: String) {
-        if dataContainers[index].image == nil {
-            let mConcurrentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
-            dispatch_async(mConcurrentQueue) {
-                let img = self.dataService.downloadImage(urlString: urlString)
-                self.dataContainers[index].image = img
-            }
-            dispatch_async(dispatch_get_main_queue(), {
-                self.tableView.reloadData()
-            })
-        }
-    }
     
 
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ImageSegue" {
+            if let detailVC = segue.destinationViewController as? DetailVC {
+                if let data = sender as? DataContainer {
+                    detailVC.data = data
+                }
+            }
+        }
     }
-    */
 
 }

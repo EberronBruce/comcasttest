@@ -14,6 +14,7 @@ class DataService {
     
     private var dataContainer = [DataContainer]()
     
+    //Mark: - This starts the API call give a string that represents the URL for the API
     func getInformationFromApi(urlString: String) {
         if let url = NSURL(string: urlString) {
             let session = NSURLSession.sharedSession()
@@ -35,6 +36,7 @@ class DataService {
         
     }
     
+    //Mark: - This retrieves the JSon objects from the data response
     private func retrieveJSON(responseData: NSData) {
         do {
             let json = try NSJSONSerialization.JSONObjectWithData(responseData, options: NSJSONReadingOptions.AllowFragments)
@@ -55,13 +57,21 @@ class DataService {
         }
     }
     
+    
+    //Mark: - This function parses the json that is given to it as an array.
     private func parseJsonDataArray(jsonArray: NSArray) {
         for jsonItem in jsonArray {
             
-            if let title = jsonItem["title"] as? String, let description = jsonItem["description"] as? String, let link = jsonItem["link"] as? String {
+            if let title = jsonItem["title"] as? String, let link = jsonItem["link"] as? String {
+                var description = jsonItem["description"] as? String
+                    
+                if description == nil {
+                    description = "No Description"
+                }
                 
                 var type: String?
                 
+                //This little bit replaces the type with a just the type of the image and remove the prefix of "image/"
                 if let imageType = jsonItem["type"] as? String {
                     let typeChange = imageType.stringByReplacingOccurrencesOfString("image/", withString: "")
                     type = typeChange
@@ -69,49 +79,20 @@ class DataService {
                 } else {
                     type = nil
                 }
-                
-                putDataIntoContainer(title: title, description: description, link: link, type: type)
+                putDataIntoContainer(title: title, description: description!, link: link, type: type)
             }
         }
     }
     
+    //Mark: - This function puts the data that is collected into the data container array.
     private func putDataIntoContainer(title title: String, description: String, link: String, type: String?) {
         let data = DataContainer(title: title, description: description, type: type, link: link)
         dataContainer.append(data)
     }
-    
+    //Mark: - This function sends out the notification and gives it the data key so that the data can be retrieve from the listener.
     private func sendNotificationOut() {
         NSNotificationCenter.defaultCenter().postNotificationName(API_NOTIFY, object: self, userInfo: [NOTIFY_DICT_KEY:dataContainer])
     }
-    
-//    func downloadImage(urlString link: String, imageAquired:(image: UIImage, success: Bool) -> Void) {
-//        if let url = NSURL(string: link) {
-//            if let data = NSData(contentsOfURL: url) {
-//                if let img = UIImage(data: data) {
-//                    print("Image downloaded")
-//                    imageAquired(image: img, success: true)
-//                } else {
-//                    print("Cannot convert image data")
-//                }
-//            } else {
-//                print("Could not get Image Data from URL")
-//            }
-//        } else {
-//            print("Could not get URL from String")
-//        }
-//    }
-    
-    func downloadImage(urlString link: String) -> UIImage? {
-        if let url = NSURL(string: link) {
-            if let data = NSData(contentsOfURL: url) {
-                if let img = UIImage(data: data) {
-                    return img
-                }
-            }
-        }
-        return nil
-    }
-    
     
     
 }

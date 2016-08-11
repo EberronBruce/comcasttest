@@ -6,6 +6,11 @@
 //  Copyright © 2016 Red Raven Computing Studios. All rights reserved.
 //
 
+/*
+ This class is used to hold data from what is retrieved from the API call.
+ 
+ */
+
 import Foundation
 import UIKit
 
