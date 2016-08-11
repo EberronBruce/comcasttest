@@ -35,6 +35,12 @@
 		7A23C3901D5BF38A007770EA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C38F1D5BF38A007770EA /* InformationCell.swift */; };
 		7A23C3911D5BF38A007770EA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C38F1D5BF38A007770EA /* InformationCell.swift */; };
 		7A23C3921D5BF38A007770EA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C38F1D5BF38A007770EA /* InformationCell.swift */; };
+		7A23C3941D5C0EAB007770EA /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3931D5C0EAB007770EA /* Dispatch.swift */; };
+		7A23C3951D5C0EAB007770EA /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3931D5C0EAB007770EA /* Dispatch.swift */; };
+		7A23C3961D5C0EAB007770EA /* Dispatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3931D5C0EAB007770EA /* Dispatch.swift */; };
+		7A23C3981D5C18EF007770EA /* ImageOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3971D5C18EF007770EA /* ImageOperations.swift */; };
+		7A23C3991D5C18EF007770EA /* ImageOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3971D5C18EF007770EA /* ImageOperations.swift */; };
+		7A23C39A1D5C18EF007770EA /* ImageOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3971D5C18EF007770EA /* ImageOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +81,8 @@
 		7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		7A23C3891D5BD089007770EA /* TableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
 		7A23C38F1D5BF38A007770EA /* InformationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
+		7A23C3931D5C0EAB007770EA /* Dispatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dispatch.swift; sourceTree = "<group>"; };
+		7A23C3971D5C18EF007770EA /* ImageOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				7A0B68651D5A98B100E1F935 /* DataService.swift */,
+				7A23C3931D5C0EAB007770EA /* Dispatch.swift */,
+				7A23C3971D5C18EF007770EA /* ImageOperations.swift */,
 			);
 			name = Service;
 			sourceTree = "<group>";
@@ -327,9 +337,11 @@
 				7A23C38A1D5BD089007770EA /* TableVC.swift in Sources */,
 				7A23C3861D5BBD6E007770EA /* WelcomeVC.swift in Sources */,
 				7A23C3901D5BF38A007770EA /* InformationCell.swift in Sources */,
+				7A23C3981D5C18EF007770EA /* ImageOperations.swift in Sources */,
 				7A0B68391D5A97DC00E1F935 /* ComCastTest.xcdatamodeld in Sources */,
 				7A23C3821D5BB03B007770EA /* LoginVC.swift in Sources */,
 				7A0B68311D5A97DC00E1F935 /* AppDelegate.swift in Sources */,
+				7A23C3941D5C0EAB007770EA /* Dispatch.swift in Sources */,
 				7A0B68661D5A98B100E1F935 /* DataService.swift in Sources */,
 				7A0B686E1D5AA25600E1F935 /* DataContainer.swift in Sources */,
 			);
@@ -339,6 +351,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A23C3951D5C0EAB007770EA /* Dispatch.swift in Sources */,
 				7A0B68491D5A97DD00E1F935 /* ComCastTestTests.swift in Sources */,
 				7A23C3871D5BBD6E007770EA /* WelcomeVC.swift in Sources */,
 				7A0B68671D5A98B100E1F935 /* DataService.swift in Sources */,
@@ -347,6 +360,7 @@
 				7A23C38B1D5BD089007770EA /* TableVC.swift in Sources */,
 				7A23C3911D5BF38A007770EA /* InformationCell.swift in Sources */,
 				7A23C3831D5BB03B007770EA /* LoginVC.swift in Sources */,
+				7A23C3991D5C18EF007770EA /* ImageOperations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A23C3961D5C0EAB007770EA /* Dispatch.swift in Sources */,
 				7A0B68541D5A97DD00E1F935 /* ComCastTestUITests.swift in Sources */,
 				7A23C3881D5BBD6E007770EA /* WelcomeVC.swift in Sources */,
 				7A0B68681D5A98B100E1F935 /* DataService.swift in Sources */,
@@ -362,6 +377,7 @@
 				7A23C38C1D5BD089007770EA /* TableVC.swift in Sources */,
 				7A23C3921D5BF38A007770EA /* InformationCell.swift in Sources */,
 				7A23C3841D5BB03B007770EA /* LoginVC.swift in Sources */,
+				7A23C39A1D5C18EF007770EA /* ImageOperations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

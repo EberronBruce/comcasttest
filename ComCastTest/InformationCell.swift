@@ -22,4 +22,8 @@ class InformationCell: UITableViewCell {
         self.titleLabel.text = title
         self.descriptionLabel.text = description
     }
+    
+    func updateCellImage(image: UIImage) {
+        self.imageview.image = image
+    }
 }

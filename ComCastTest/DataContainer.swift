@@ -15,6 +15,7 @@ class DataContainer {
     private var _description: String!
     private var _type: String?
     private var _link: String!
+    private var _image: UIImage?
     
     init(title: String, description: String, type: String?, link: String) {
         self._title = title
@@ -31,11 +32,24 @@ class DataContainer {
         return _description
     }
     
-    var type: String {
+    var type: String? {
         if _type != nil {
             return _type!
         } else {
-            return ""
+            return nil
+        }
+    }
+    
+    var image: UIImage? {
+        set{
+            _image = newValue
+        }
+        get {
+            if _image != nil {
+                return _image
+            } else{
+                return nil
+            }
         }
     }
     

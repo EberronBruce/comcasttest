@@ -84,21 +84,32 @@ class DataService {
         NSNotificationCenter.defaultCenter().postNotificationName(API_NOTIFY, object: self, userInfo: [NOTIFY_DICT_KEY:dataContainer])
     }
     
-    func downloadImage(urlString link: String, imageAquired:(image: UIImage, success: Bool) -> Void) {
+//    func downloadImage(urlString link: String, imageAquired:(image: UIImage, success: Bool) -> Void) {
+//        if let url = NSURL(string: link) {
+//            if let data = NSData(contentsOfURL: url) {
+//                if let img = UIImage(data: data) {
+//                    print("Image downloaded")
+//                    imageAquired(image: img, success: true)
+//                } else {
+//                    print("Cannot convert image data")
+//                }
+//            } else {
+//                print("Could not get Image Data from URL")
+//            }
+//        } else {
+//            print("Could not get URL from String")
+//        }
+//    }
+    
+    func downloadImage(urlString link: String) -> UIImage? {
         if let url = NSURL(string: link) {
             if let data = NSData(contentsOfURL: url) {
                 if let img = UIImage(data: data) {
-                    print("Image downloaded")
-                    imageAquired(image: img, success: true)
-                } else {
-                    print("Cannot convert image data")
+                    return img
                 }
-            } else {
-                print("Could not get Image Data from URL")
             }
-        } else {
-            print("Could not get URL from String")
         }
+        return nil
     }
     
     
