@@ -15,6 +15,9 @@ let API_URL = "https://api.myjson.com/bins/4je7x"
 // Key to get array for information on API call
 let DATA_KEY = "data"
 
+let API_NOTIFY = "api.notify.finish"
+let NOTIFY_DICT_KEY = "data"
+
 class privateConstants {
     private let _USERNAME = "john"
     private let _PASSWORD = "doe"

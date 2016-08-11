@@ -16,9 +16,7 @@ class WelcomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigatioBar()
-        print(username)
-
-        // Do any additional setup after loading the view.
+        self.usernameLabel.text = username
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,6 +25,7 @@ class WelcomeVC: UIViewController {
     }
     
     @IBAction func yessPressed(sender: UIButton) {
+        performSegueWithIdentifier("TableSegue", sender: nil)
     }
     
     @IBAction func logoutPressed(sender: UIBarButtonItem) {
@@ -54,7 +53,7 @@ class WelcomeVC: UIViewController {
 
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -62,6 +61,6 @@ class WelcomeVC: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
 
 }

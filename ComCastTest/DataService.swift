@@ -12,6 +12,8 @@ import UIKit
 
 class DataService {
     
+    private var dataContainer = [DataContainer]()
+    
     func getInformationFromApi(urlString: String) {
         if let url = NSURL(string: urlString) {
             let session = NSURLSession.sharedSession()
@@ -21,6 +23,7 @@ class DataService {
                     self.retrieveJSON(responseData)
                     
                     //Send back Data
+                    self.sendNotificationOut()
                 } else if (error != nil) {
                     print(error.debugDescription)
                 }
@@ -55,13 +58,49 @@ class DataService {
     private func parseJsonDataArray(jsonArray: NSArray) {
         for jsonItem in jsonArray {
             
-            if let type = jsonItem["type"] as? String {
-                let typeChange = type.stringByReplacingOccurrencesOfString("image/", withString: "")
-                //TODO
-            } else {
+            if let title = jsonItem["title"] as? String, let description = jsonItem["description"] as? String, let link = jsonItem["link"] as? String {
                 
+                var type: String?
+                
+                if let imageType = jsonItem["type"] as? String {
+                    let typeChange = imageType.stringByReplacingOccurrencesOfString("image/", withString: "")
+                    type = typeChange
+                    
+                } else {
+                    type = nil
+                }
+                
+                putDataIntoContainer(title: title, description: description, link: link, type: type)
             }
         }
     }
+    
+    private func putDataIntoContainer(title title: String, description: String, link: String, type: String?) {
+        let data = DataContainer(title: title, description: description, type: type, link: link)
+        dataContainer.append(data)
+    }
+    
+    private func sendNotificationOut() {
+        NSNotificationCenter.defaultCenter().postNotificationName(API_NOTIFY, object: self, userInfo: [NOTIFY_DICT_KEY:dataContainer])
+    }
+    
+    func downloadImage(urlString link: String, imageAquired:(image: UIImage, success: Bool) -> Void) {
+        if let url = NSURL(string: link) {
+            if let data = NSData(contentsOfURL: url) {
+                if let img = UIImage(data: data) {
+                    print("Image downloaded")
+                    imageAquired(image: img, success: true)
+                } else {
+                    print("Cannot convert image data")
+                }
+            } else {
+                print("Could not get Image Data from URL")
+            }
+        } else {
+            print("Could not get URL from String")
+        }
+    }
+    
+    
     
 }

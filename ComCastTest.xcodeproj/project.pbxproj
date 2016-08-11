@@ -29,6 +29,12 @@
 		7A23C3861D5BBD6E007770EA /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */; };
 		7A23C3871D5BBD6E007770EA /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */; };
 		7A23C3881D5BBD6E007770EA /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */; };
+		7A23C38A1D5BD089007770EA /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3891D5BD089007770EA /* TableVC.swift */; };
+		7A23C38B1D5BD089007770EA /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3891D5BD089007770EA /* TableVC.swift */; };
+		7A23C38C1D5BD089007770EA /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3891D5BD089007770EA /* TableVC.swift */; };
+		7A23C3901D5BF38A007770EA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C38F1D5BF38A007770EA /* InformationCell.swift */; };
+		7A23C3911D5BF38A007770EA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C38F1D5BF38A007770EA /* InformationCell.swift */; };
+		7A23C3921D5BF38A007770EA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C38F1D5BF38A007770EA /* InformationCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,8 @@
 		7A0B686D1D5AA25600E1F935 /* DataContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataContainer.swift; sourceTree = "<group>"; };
 		7A23C3811D5BB03B007770EA /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		7A23C3891D5BD089007770EA /* TableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		7A23C38F1D5BF38A007770EA /* InformationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InformationCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				7A0B68341D5A97DC00E1F935 /* Main.storyboard */,
+				7A23C38F1D5BF38A007770EA /* InformationCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -170,6 +179,7 @@
 			children = (
 				7A23C3811D5BB03B007770EA /* LoginVC.swift */,
 				7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */,
+				7A23C3891D5BD089007770EA /* TableVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -314,7 +324,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0B686A1D5A99A800E1F935 /* Constants.swift in Sources */,
+				7A23C38A1D5BD089007770EA /* TableVC.swift in Sources */,
 				7A23C3861D5BBD6E007770EA /* WelcomeVC.swift in Sources */,
+				7A23C3901D5BF38A007770EA /* InformationCell.swift in Sources */,
 				7A0B68391D5A97DC00E1F935 /* ComCastTest.xcdatamodeld in Sources */,
 				7A23C3821D5BB03B007770EA /* LoginVC.swift in Sources */,
 				7A0B68311D5A97DC00E1F935 /* AppDelegate.swift in Sources */,
@@ -332,6 +344,8 @@
 				7A0B68671D5A98B100E1F935 /* DataService.swift in Sources */,
 				7A0B686B1D5A99A800E1F935 /* Constants.swift in Sources */,
 				7A0B686F1D5AA25600E1F935 /* DataContainer.swift in Sources */,
+				7A23C38B1D5BD089007770EA /* TableVC.swift in Sources */,
+				7A23C3911D5BF38A007770EA /* InformationCell.swift in Sources */,
 				7A23C3831D5BB03B007770EA /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +359,8 @@
 				7A0B68681D5A98B100E1F935 /* DataService.swift in Sources */,
 				7A0B686C1D5A99A800E1F935 /* Constants.swift in Sources */,
 				7A0B68701D5AA25600E1F935 /* DataContainer.swift in Sources */,
+				7A23C38C1D5BD089007770EA /* TableVC.swift in Sources */,
+				7A23C3921D5BF38A007770EA /* InformationCell.swift in Sources */,
 				7A23C3841D5BB03B007770EA /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
