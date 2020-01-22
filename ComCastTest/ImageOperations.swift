@@ -29,16 +29,16 @@ class ImageRecord {
 
 //This sets up the NSOperations and holds the queues for downloads
 class PendingOperations {
-    lazy var downloadsInProgress = [NSIndexPath:NSOperation]()
-    lazy var downloadQueue:NSOperationQueue = {
-        var queue = NSOperationQueue()
+    lazy var downloadsInProgress = [NSIndexPath:Operation]()
+    lazy var downloadQueue:OperationQueue = {
+        var queue = OperationQueue()
         queue.name = "Download queue"
         return queue
     }()
 }
 
 //This class is uses NSOperation to download the image given a url. It constantly checks to see if has been canceled.
-class ImageDownloader: NSOperation {
+class ImageDownloader: Operation {
     
     let imageRecord: ImageRecord
     
@@ -48,18 +48,18 @@ class ImageDownloader: NSOperation {
     
     override func main() {
         
-        if self.cancelled {
+        if self.isCancelled {
             return
         }
         
-        let imageData = NSData(contentsOfURL: self.imageRecord.url)
+        let imageData = NSData(contentsOf: self.imageRecord.url as URL)
         
-        if self.cancelled{
+        if self.isCancelled{
             return
         }
         
-        if imageData?.length > 0 {
-            self.imageRecord.image = UIImage(data: imageData!)
+        if imageData!.length > 0 {
+            self.imageRecord.image = UIImage(data: imageData! as Data)
             self.imageRecord.state = .Downloaded
         } else {
             self.imageRecord.state = .Failed

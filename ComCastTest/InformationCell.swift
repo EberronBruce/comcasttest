@@ -19,7 +19,7 @@ class InformationCell: UITableViewCell {
     @IBOutlet weak var imageview: UIImageView!
 
     //Mark: - This take two strings, one for the title and other for the description and sets the labels to the text that is passed in.
-    func setUpCell(title title:String, description: String) {
+    func setUpCell(title:String, description: String) {
         self.titleLabel.text = title
         self.descriptionLabel.text = description
     }

@@ -24,7 +24,8 @@ class DetailVC: UIViewController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    
+    override func viewWillAppear(_ animated: Bool) {
         descriptionLabel.text = data.description
         titleLabel.text = data.title
         if data.image != nil {

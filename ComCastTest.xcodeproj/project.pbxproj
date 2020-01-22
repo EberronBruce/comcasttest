@@ -12,53 +12,16 @@
 		7A0B68391D5A97DC00E1F935 /* ComCastTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68371D5A97DC00E1F935 /* ComCastTest.xcdatamodeld */; };
 		7A0B683B1D5A97DC00E1F935 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B683A1D5A97DC00E1F935 /* Assets.xcassets */; };
 		7A0B683E1D5A97DC00E1F935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A0B683C1D5A97DC00E1F935 /* LaunchScreen.storyboard */; };
-		7A0B68491D5A97DD00E1F935 /* ComCastTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68481D5A97DD00E1F935 /* ComCastTestTests.swift */; };
-		7A0B68541D5A97DD00E1F935 /* ComCastTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68531D5A97DD00E1F935 /* ComCastTestUITests.swift */; };
 		7A0B68661D5A98B100E1F935 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68651D5A98B100E1F935 /* DataService.swift */; };
-		7A0B68671D5A98B100E1F935 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68651D5A98B100E1F935 /* DataService.swift */; };
-		7A0B68681D5A98B100E1F935 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68651D5A98B100E1F935 /* DataService.swift */; };
 		7A0B686A1D5A99A800E1F935 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68691D5A99A800E1F935 /* Constants.swift */; };
-		7A0B686B1D5A99A800E1F935 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68691D5A99A800E1F935 /* Constants.swift */; };
-		7A0B686C1D5A99A800E1F935 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B68691D5A99A800E1F935 /* Constants.swift */; };
 		7A0B686E1D5AA25600E1F935 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B686D1D5AA25600E1F935 /* DataContainer.swift */; };
-		7A0B686F1D5AA25600E1F935 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B686D1D5AA25600E1F935 /* DataContainer.swift */; };
-		7A0B68701D5AA25600E1F935 /* DataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0B686D1D5AA25600E1F935 /* DataContainer.swift */; };
 		7A23C3821D5BB03B007770EA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3811D5BB03B007770EA /* LoginVC.swift */; };
-		7A23C3831D5BB03B007770EA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3811D5BB03B007770EA /* LoginVC.swift */; };
-		7A23C3841D5BB03B007770EA /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3811D5BB03B007770EA /* LoginVC.swift */; };
 		7A23C3861D5BBD6E007770EA /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */; };
-		7A23C3871D5BBD6E007770EA /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */; };
-		7A23C3881D5BBD6E007770EA /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3851D5BBD6E007770EA /* WelcomeVC.swift */; };
 		7A23C38A1D5BD089007770EA /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3891D5BD089007770EA /* TableVC.swift */; };
-		7A23C38B1D5BD089007770EA /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3891D5BD089007770EA /* TableVC.swift */; };
-		7A23C38C1D5BD089007770EA /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3891D5BD089007770EA /* TableVC.swift */; };
 		7A23C3901D5BF38A007770EA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C38F1D5BF38A007770EA /* InformationCell.swift */; };
-		7A23C3911D5BF38A007770EA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C38F1D5BF38A007770EA /* InformationCell.swift */; };
-		7A23C3921D5BF38A007770EA /* InformationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C38F1D5BF38A007770EA /* InformationCell.swift */; };
 		7A23C3981D5C18EF007770EA /* ImageOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3971D5C18EF007770EA /* ImageOperations.swift */; };
-		7A23C3991D5C18EF007770EA /* ImageOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3971D5C18EF007770EA /* ImageOperations.swift */; };
-		7A23C39A1D5C18EF007770EA /* ImageOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C3971D5C18EF007770EA /* ImageOperations.swift */; };
 		7A23C39C1D5C2D11007770EA /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C39B1D5C2D11007770EA /* DetailVC.swift */; };
-		7A23C39D1D5C2D11007770EA /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C39B1D5C2D11007770EA /* DetailVC.swift */; };
-		7A23C39E1D5C2D11007770EA /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A23C39B1D5C2D11007770EA /* DetailVC.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		7A0B68451D5A97DC00E1F935 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A0B68251D5A97DB00E1F935 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7A0B682C1D5A97DC00E1F935;
-			remoteInfo = ComCastTest;
-		};
-		7A0B68501D5A97DD00E1F935 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7A0B68251D5A97DB00E1F935 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7A0B682C1D5A97DC00E1F935;
-			remoteInfo = ComCastTest;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7A0B682D1D5A97DC00E1F935 /* ComCastTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComCastTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,10 +31,8 @@
 		7A0B683A1D5A97DC00E1F935 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A0B683D1D5A97DC00E1F935 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7A0B683F1D5A97DC00E1F935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A0B68441D5A97DC00E1F935 /* ComCastTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComCastTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0B68481D5A97DD00E1F935 /* ComCastTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComCastTestTests.swift; sourceTree = "<group>"; };
 		7A0B684A1D5A97DD00E1F935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7A0B684F1D5A97DD00E1F935 /* ComCastTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ComCastTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A0B68531D5A97DD00E1F935 /* ComCastTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComCastTestUITests.swift; sourceTree = "<group>"; };
 		7A0B68551D5A97DD00E1F935 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A0B68651D5A98B100E1F935 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
@@ -87,20 +48,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		7A0B682A1D5A97DC00E1F935 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7A0B68411D5A97DC00E1F935 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7A0B684C1D5A97DD00E1F935 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				7A0B682D1D5A97DC00E1F935 /* ComCastTest.app */,
-				7A0B68441D5A97DC00E1F935 /* ComCastTestTests.xctest */,
-				7A0B684F1D5A97DD00E1F935 /* ComCastTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,42 +167,6 @@
 			productReference = 7A0B682D1D5A97DC00E1F935 /* ComCastTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		7A0B68431D5A97DC00E1F935 /* ComCastTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7A0B685B1D5A97DD00E1F935 /* Build configuration list for PBXNativeTarget "ComCastTestTests" */;
-			buildPhases = (
-				7A0B68401D5A97DC00E1F935 /* Sources */,
-				7A0B68411D5A97DC00E1F935 /* Frameworks */,
-				7A0B68421D5A97DC00E1F935 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7A0B68461D5A97DC00E1F935 /* PBXTargetDependency */,
-			);
-			name = ComCastTestTests;
-			productName = ComCastTestTests;
-			productReference = 7A0B68441D5A97DC00E1F935 /* ComCastTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		7A0B684E1D5A97DD00E1F935 /* ComCastTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7A0B685E1D5A97DD00E1F935 /* Build configuration list for PBXNativeTarget "ComCastTestUITests" */;
-			buildPhases = (
-				7A0B684B1D5A97DD00E1F935 /* Sources */,
-				7A0B684C1D5A97DD00E1F935 /* Frameworks */,
-				7A0B684D1D5A97DD00E1F935 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7A0B68511D5A97DD00E1F935 /* PBXTargetDependency */,
-			);
-			name = ComCastTestUITests;
-			productName = ComCastTestUITests;
-			productReference = 7A0B684F1D5A97DD00E1F935 /* ComCastTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -265,25 +174,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Red Raven Computing Studios";
 				TargetAttributes = {
 					7A0B682C1D5A97DC00E1F935 = {
 						CreatedOnToolsVersion = 7.3.1;
-					};
-					7A0B68431D5A97DC00E1F935 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 7A0B682C1D5A97DC00E1F935;
-					};
-					7A0B684E1D5A97DD00E1F935 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 7A0B682C1D5A97DC00E1F935;
+						DevelopmentTeam = V3GFNATBC5;
 					};
 				};
 			};
 			buildConfigurationList = 7A0B68281D5A97DB00E1F935 /* Build configuration list for PBXProject "ComCastTest" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -295,8 +197,6 @@
 			projectRoot = "";
 			targets = (
 				7A0B682C1D5A97DC00E1F935 /* ComCastTest */,
-				7A0B68431D5A97DC00E1F935 /* ComCastTestTests */,
-				7A0B684E1D5A97DD00E1F935 /* ComCastTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -309,20 +209,6 @@
 				7A0B683E1D5A97DC00E1F935 /* LaunchScreen.storyboard in Resources */,
 				7A0B683B1D5A97DC00E1F935 /* Assets.xcassets in Resources */,
 				7A0B68361D5A97DC00E1F935 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7A0B68421D5A97DC00E1F935 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7A0B684D1D5A97DD00E1F935 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,54 +233,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A0B68401D5A97DC00E1F935 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7A0B68491D5A97DD00E1F935 /* ComCastTestTests.swift in Sources */,
-				7A23C39D1D5C2D11007770EA /* DetailVC.swift in Sources */,
-				7A23C3871D5BBD6E007770EA /* WelcomeVC.swift in Sources */,
-				7A0B68671D5A98B100E1F935 /* DataService.swift in Sources */,
-				7A0B686B1D5A99A800E1F935 /* Constants.swift in Sources */,
-				7A0B686F1D5AA25600E1F935 /* DataContainer.swift in Sources */,
-				7A23C38B1D5BD089007770EA /* TableVC.swift in Sources */,
-				7A23C3911D5BF38A007770EA /* InformationCell.swift in Sources */,
-				7A23C3831D5BB03B007770EA /* LoginVC.swift in Sources */,
-				7A23C3991D5C18EF007770EA /* ImageOperations.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7A0B684B1D5A97DD00E1F935 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7A0B68541D5A97DD00E1F935 /* ComCastTestUITests.swift in Sources */,
-				7A23C39E1D5C2D11007770EA /* DetailVC.swift in Sources */,
-				7A23C3881D5BBD6E007770EA /* WelcomeVC.swift in Sources */,
-				7A0B68681D5A98B100E1F935 /* DataService.swift in Sources */,
-				7A0B686C1D5A99A800E1F935 /* Constants.swift in Sources */,
-				7A0B68701D5AA25600E1F935 /* DataContainer.swift in Sources */,
-				7A23C38C1D5BD089007770EA /* TableVC.swift in Sources */,
-				7A23C3921D5BF38A007770EA /* InformationCell.swift in Sources */,
-				7A23C3841D5BB03B007770EA /* LoginVC.swift in Sources */,
-				7A23C39A1D5C18EF007770EA /* ImageOperations.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7A0B68461D5A97DC00E1F935 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7A0B682C1D5A97DC00E1F935 /* ComCastTest */;
-			targetProxy = 7A0B68451D5A97DC00E1F935 /* PBXContainerItemProxy */;
-		};
-		7A0B68511D5A97DD00E1F935 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 7A0B682C1D5A97DC00E1F935 /* ComCastTest */;
-			targetProxy = 7A0B68501D5A97DD00E1F935 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7A0B68341D5A97DC00E1F935 /* Main.storyboard */ = {
@@ -420,18 +259,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -466,18 +316,29 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -496,6 +357,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -505,10 +367,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V3GFNATBC5;
 				INFOPLIST_FILE = ComCastTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.redravencomputing.ComCastTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -516,56 +380,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = V3GFNATBC5;
 				INFOPLIST_FILE = ComCastTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.redravencomputing.ComCastTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		7A0B685C1D5A97DD00E1F935 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ComCastTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.redravencomputing.ComCastTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ComCastTest.app/ComCastTest";
-			};
-			name = Debug;
-		};
-		7A0B685D1D5A97DD00E1F935 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = ComCastTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.redravencomputing.ComCastTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ComCastTest.app/ComCastTest";
-			};
-			name = Release;
-		};
-		7A0B685F1D5A97DD00E1F935 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ComCastTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.redravencomputing.ComCastTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ComCastTest;
-			};
-			name = Debug;
-		};
-		7A0B68601D5A97DD00E1F935 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = ComCastTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.redravencomputing.ComCastTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = ComCastTest;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -586,24 +406,6 @@
 			buildConfigurations = (
 				7A0B68591D5A97DD00E1F935 /* Debug */,
 				7A0B685A1D5A97DD00E1F935 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7A0B685B1D5A97DD00E1F935 /* Build configuration list for PBXNativeTarget "ComCastTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7A0B685C1D5A97DD00E1F935 /* Debug */,
-				7A0B685D1D5A97DD00E1F935 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7A0B685E1D5A97DD00E1F935 /* Build configuration list for PBXNativeTarget "ComCastTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7A0B685F1D5A97DD00E1F935 /* Debug */,
-				7A0B68601D5A97DD00E1F935 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

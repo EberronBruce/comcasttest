@@ -24,7 +24,7 @@ class WelcomeVC: UIViewController {
     }
     
     @IBAction func yessPressed(sender: UIButton) {
-        performSegueWithIdentifier("TableSegue", sender: nil)
+        performSegue(withIdentifier: "TableSegue", sender: nil)
     }
     
     @IBAction func logoutPressed(sender: UIBarButtonItem) {
@@ -33,23 +33,23 @@ class WelcomeVC: UIViewController {
     
     //Mark: - Sends an alert to the user and sets the screen back to the root view controller
     func sendAlert() {
-        let alert = UIAlertController(title: "Goodbye", message: "Goodbye \(username)", preferredStyle: UIAlertControllerStyle.Alert)
-        let goodbyeAction = UIAlertAction(title: "Bye", style: .Default) { (alertAction:UIAlertAction) in
-            self.navigationController?.popToRootViewControllerAnimated(true)
+        let alert = UIAlertController(title: "Goodbye", message: "Goodbye \(username ?? "UserName")", preferredStyle: UIAlertController.Style.alert)
+        let goodbyeAction = UIAlertAction(title: "Bye", style: .default) { (alertAction:UIAlertAction) in
+            self.navigationController?.popToRootViewController(animated: true)
         }
         
         alert.addAction(goodbyeAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
         
     }
     
     //Mark:- This sets up a navigation bar that is invisible and sets up the back buttons to become white
     func setUpNavigatioBar(){
-        self.navigationController?.navigationBarHidden = false
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+        self.navigationController?.isNavigationBarHidden = false
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.translucent = true
-        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
 
 }

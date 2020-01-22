@@ -29,7 +29,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         
         self.usernameTextField.delegate = self
         self.passwordTextField.delegate = self
-        self.passwordTextField.secureTextEntry = true
+        self.passwordTextField.isSecureTextEntry = true
         
         let constant = privateConstants()
         self.username = constant.USERNAME
@@ -37,7 +37,7 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     }
     
     //Resets the text fields when the view appears
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         setUpNavigatioBar()
         usernameTextField.text = ""
         passwordTextField.text = ""
@@ -47,12 +47,12 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         var enterUsername = usernameTextField.text
         let enterPassword = passwordTextField.text
         
-        enterUsername = enterUsername?.lowercaseString //sets the username to all lower case, easy for testing
+        enterUsername = enterUsername?.lowercased() //sets the username to all lower case, easy for testing
 
         //Check for username and password
         if enterUsername == username && enterPassword == password {
             self.view.endEditing(true)
-            performSegueWithIdentifier("WelcomeSegue", sender: username)
+            performSegue(withIdentifier: "WelcomeSegue", sender: username)
         } else {
             sendAlert()
         }
@@ -60,26 +60,26 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     //Mark: - This function sends and alert when the username and password is wrong
     func sendAlert(){
-        let alert = UIAlertController(title: "Auth", message: "Error - Authentication not valid", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+        let alert = UIAlertController(title: "Auth", message: "Error - Authentication not valid", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
         
     }
     
     //Ends the keyboard when enter is pressed
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
     //Used to send notifications for keyboard
     func registerForKeyboardNotifications() {
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginVC.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(LoginVC.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginVC.keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginVC.keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
     //Mark: - This function moves the view when the keyboard is displayed to show both text fields
-    func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y == 0 {
                 self.view.frame.origin.y -= keyboardSize.height
             } else {
@@ -88,8 +88,8 @@ class LoginVC: UIViewController, UITextFieldDelegate {
         }
     }
     //Mark: - This function moves the view down when the keyboard is dismissed
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y != 0 {
                 self.view.frame.origin.y += keyboardSize.height
             } else {
@@ -100,15 +100,16 @@ class LoginVC: UIViewController, UITextFieldDelegate {
     
     //Mark: - this hides the navigation bar.
     private func setUpNavigatioBar(){
-        self.navigationController?.navigationBarHidden = true
+        self.navigationController?.isNavigationBarHidden = true
     }
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WelcomeSegue" {
-            if let welcomeVC = segue.destinationViewController as? WelcomeVC {
+            if let welcomeVC = segue.destination as? WelcomeVC {
                 if let username = sender as? String {
                     welcomeVC.username = username
                 }

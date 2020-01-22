@@ -8,7 +8,8 @@
 
 import UIKit
 
-class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class TableVC: UIViewController  {
+    
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,12 +24,13 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
-        dataService.getInformationFromApi(API_URL)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(TableVC.getDataFromDataService(_:)), name: API_NOTIFY, object: nil)
+        dataService.getInformationFromApi(urlString: API_URL)
+        NotificationCenter.default.addObserver(self, selector: #selector(TableVC.getDataFromDataService(notification:)), name: NSNotification.Name(API_NOTIFY), object: nil)
     }
     
     //Mark: - Table View Methods
     //------------------------------------------------------------------------------------
+    /*
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataContainers.count
     }
@@ -69,14 +71,14 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         performSegueWithIdentifier("ImageSegue", sender: data)
         
         
-    }
+    }*/
     //-----------------------------------------------------------------------------------
     
     //Mark: - This function calls the function to start downloading the images
     func startOperationsForImageRecord(imageDetails: ImageRecord, indexPath: NSIndexPath){
         switch (imageDetails.state) {
         case .New:
-            startDownloadForRecord(imageDetails, indexPath: indexPath)
+            startDownloadForRecord(imageDetails: imageDetails, indexPath: indexPath)
         case .Downloaded:
             NSLog("Downloaded")
         default:
@@ -92,21 +94,21 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
         let downloader = ImageDownloader(imageRecord: imageDetails)
         downloader.completionBlock = {
-            if downloader.cancelled {
+            if downloader.isCancelled {
                 return
             }
-            dispatch_async(dispatch_get_main_queue(), {
-                self.pendingOperations.downloadsInProgress.removeValueForKey(indexPath)
-                self.tableView.reloadRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-            })
+            DispatchQueue.main.async {
+                self.pendingOperations.downloadsInProgress.removeValue(forKey: indexPath)
+                self.tableView.reloadRows(at: [(indexPath as IndexPath)], with: .fade)
+            }
         }
         pendingOperations.downloadsInProgress[indexPath] = downloader
         pendingOperations.downloadQueue.addOperation(downloader)
     }
 
     //Mark: - This function is called from the notification and it takes the data and puts it in to the dataContainer and in the images arrary.
-    func getDataFromDataService(notification: NSNotification) {
-        dispatch_async(dispatch_get_main_queue()) {
+    @objc func getDataFromDataService(notification: NSNotification) {
+        DispatchQueue.main.async {
             if let dataContainer = notification.userInfo![NOTIFY_DICT_KEY] as? [DataContainer] {
                 self.dataContainers = dataContainer
                 for data in self.dataContainers {
@@ -124,14 +126,61 @@ class TableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "ImageSegue" {
-            if let detailVC = segue.destinationViewController as? DetailVC {
-                if let data = sender as? DataContainer {
-                    detailVC.data = data
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+          if segue.identifier == "ImageSegue" {
+              if let detailVC = segue.destination as? DetailVC {
+                  if let data = sender as? DataContainer {
+                      detailVC.data = data
+                  }
+              }
+          }
+      }
+
+}
+
+
+extension TableVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataContainers.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "InfoCell") as? InformationCell {
+            let data = dataContainers[indexPath.row]
+            cell.setUpCell(title: data.title, description: data.description)
+            
+            let imageDetails = images[indexPath.row]
+            
+            if data.type != nil {
+                if imageDetails.image != nil {
+                    cell.updateCellImage(image: imageDetails.image!)
                 }
+            } else {
+                cell.updateCellImage(image: UIImage(named: "unknown")!)
             }
+            
+            switch (imageDetails.state) {
+            case .Failed: break
+            case .New, .Downloaded:
+                self.startOperationsForImageRecord(imageDetails: imageDetails, indexPath: indexPath as NSIndexPath)
+            }
+            
+            return cell
+            
+        } else {
+            return InformationCell()
         }
     }
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = dataContainers[indexPath.row]
+        data.image = images[indexPath.row].image
+        performSegue(withIdentifier: "ImageSegue", sender: data)
+    }
+    
 }
